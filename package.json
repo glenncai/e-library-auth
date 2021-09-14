@@ -15,8 +15,17 @@
         "@commitlint/config-conventional": "^13.1.0",
         "axios": "^0.21",
         "husky": "^7.0.2",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0.21",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "postcss": "^8.1.14",
+        "resolve-url-loader": "^4.0.0",
+        "sass": "^1.39.2",
+        "sass-loader": "^12.1.0"
+    },
+    "dependencies": {
+        "bootstrap": "^4.6.0",
+        "cross-env": "^7.0.3",
+        "jquery": "^3.6.0",
+        "popper.js": "^1.16.1"
     }
 }

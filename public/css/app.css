@@ -10001,3 +10001,97 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.forgotPassword-text {
+  cursor: pointer;
+  text-decoration: none;
+}
+.forgotPassword-text:link, .forgotPassword-text:visited {
+  color: #212529;
+}
+.forgotPassword-text:hover {
+  color: #7d8886;
+  text-decoration: none;
+}
+
+.grey-text {
+  color: #626262;
+}
+
+.oneHundredWidth {
+  width: 100%;
+}
+
+.dash {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0px;
+  padding: 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.dash-text {
+  padding: 0 6px;
+  background: #fff;
+  font-weight: 400;
+  color: #999;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.login-item {
+  width: 100%;
+}
+.login-item:last-child {
+  margin-top: 10px;
+}
+.login-item a:link, .login-item a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.login-item a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+}
+.login-item span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  flex: 1 1 0;
+  -ms-flex: 1 1 0px;
+  -webkit-box-flex: 1;
+}
+
+.jumpPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.jumpPage span {
+  color: #3b3b3b;
+}
+.jumpPage a {
+  margin-left: 8px;
+  text-decoration: none;
+}
+.jumpPage a:link, .jumpPage a:visited {
+  text-decoration: none;
+  color: #7d8886;
+}
+
+.submit-btn {
+  background-color: #7d8886;
+  color: #fff;
+}
+
+.btn:hover {
+  color: #e9e8e8;
+}

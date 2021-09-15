@@ -1,2 +1,113 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Customize the styles
+
+.forgotPassword-text {
+	cursor: pointer;
+	text-decoration: none;
+
+	&:link,
+	&:visited {
+		color: #212529;
+	}
+
+	&:hover {
+		color: #7d8886;
+		text-decoration: none;
+	}
+}
+
+.grey-text {
+	color: rgb(98, 98, 98);
+}
+
+.oneHundredWidth {
+	width: 100%;
+}
+
+.dash {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 0px;
+	padding: 0;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.dash-text {
+	padding: 0 6px;
+	background: #fff;
+	font-weight: 400;
+	color: #999;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.login-item {
+	width: 100%;
+
+	&:last-child {
+		margin-top: 10px;
+	}
+
+	& a:link,
+	& a:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	& a {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		font-size: 16px;
+		border-radius: 25px;
+		
+	}
+
+	& span {
+		font-size: 16px;
+		font-weight: 500;
+		color: #fff;
+		text-align: center;
+		flex: 1 1 0;
+		-ms-flex: 1 1 0px;
+		-webkit-box-flex: 1;
+	}
+}
+
+.jumpPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 15px;
+
+	& span {
+		color: rgb(59, 59, 59);
+	}
+
+	& a {
+		margin-left: 8px;
+		text-decoration: none;
+
+		&:link,
+		&:visited {
+			text-decoration: none;
+			color: #7d8886;
+		}
+	}
+}
+
+.submit-btn {
+	background-color: #7d8886;
+	color: #fff;
+}
+
+// overrite bootstrap
+.btn:hover {
+	color: rgb(233, 232, 232);
+}

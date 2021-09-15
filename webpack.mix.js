@@ -11,5 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+// add sourceMaps -> load the popper.js.map
+mix.js('resources/js/app.js', 'public/js').sourceMaps()
 .sass('resources/scss/app.scss', 'public/css');
+
+// For production mode, we will disable notifications, but we should comment it in development mode.
+// mix.disableNotifications();

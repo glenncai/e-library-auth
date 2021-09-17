@@ -9,12 +9,6 @@
             <div class="card">
                 <div class="text-center mt-2">
                     <h4 class="font-weight-bold">Register</h4>
-                    <!-- 'status' is the default session which is defined by laravel -->
-                    @if(session('status'))
-                    <div class="alert alert-success">
-                        {{session('status')}}
-                    </div>
-                    @endif
                 </div>
                 <div class="card-body">
                     <!-- Because I use Fortify. There are some built-in functions for users. You can run the command 'php artisan r:l' to check the URL for actions -->

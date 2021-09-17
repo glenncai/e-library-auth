@@ -9,10 +9,9 @@
             <div class="card">
                 <div class="text-center mt-2">
                     <h4 class="font-weight-bold">Login</h4>
-                    <!-- 'status' is the default session which is defined by laravel -->
-                    @if(session('status'))
-                    <div class="alert alert-success">
-                        {{session('status')}}
+                    @if(Session::has('login_attempt_error'))
+                    <div class="alert alert-warning">
+                        {{ Session::get('login_attempt_error') }}
                     </div>
                     @endif
                 </div>

@@ -59,8 +59,16 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
 
+        /**
+         * @author Glenn Cai
+         * @desc Limit the number of user's login action by username/email or IP
+         * @todo Exceptional user login, send warning to the corresponding user's mailbox
+         */
         RateLimiter::for('login', function (Request $request) {
-            return Limit::perMinute(5)->by($request->email.$request->ip());
+            // If the user fails to log in more than five times, they will need to wait 5 minutes before trying again.
+            return Limit::perMinutes(5, 5)->by($request->email.$request->ip())->response(function () {
+                return redirect('/login')->with('login_attempt_error', 'Login exception. You may try again in 5 mintues later.');
+            });
         });
 
         RateLimiter::for('two-factor', function (Request $request) {

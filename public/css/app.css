@@ -10100,3 +10100,7 @@ h3 {
 .btn:hover {
   color: #e9e8e8;
 }
+
+.alert-warning {
+  margin: 0;
+}

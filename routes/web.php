@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// we add the middleware to make sure that users cannot... 
+// ...get into the main page if they are not logged in.
 Route::get('/', function () {
     return view('home');
-});
+})->middleware('auth');
 

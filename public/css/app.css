@@ -10087,6 +10087,11 @@ h3 {
   color: #7d8886;
 }
 
+#remember {
+  width: 16px;
+  height: 18px;
+}
+
 .submit-btn {
   background-color: #7d8886;
   color: #fff;

@@ -22,8 +22,18 @@
                         <div class="form-group">
                             <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Enter your Email or Name">
                             @error('email')
+                            <!-- 
+                                @desc If empty field, show $message which is built in Fortify, else show login_error session
+                                which is defined in FortifyServiceProvider.php file
+                            -->
                             <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
+                                <strong>
+                                    @if (Session::has('login_error'))
+                                        {{ Session::get('login_error') }}
+                                    @else
+                                        {{ $message }}
+                                    @endif
+                                </strong>
                             </span>
                             @enderror
                         </div>

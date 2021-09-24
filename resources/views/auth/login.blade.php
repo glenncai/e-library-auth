@@ -20,8 +20,8 @@
                     <form action="{{ route('login') }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Enter your Email or Name">
-                            @error('email')
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Enter your Username">
+                            @error('name')
                             <!-- 
                                 @desc If empty field, show $message which is built in Fortify, else show login_error session
                                 which is defined in FortifyServiceProvider.php file
@@ -48,7 +48,7 @@
                         <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="remember" name="remember" {{ old('remember') ? 'checked' : '' }}>
                             <label class="form-check-label" for="remember">Remember me l </label>
-                            <span><a class="forgotPassword-text" href="{{ route('password.request') }}">Forgot Password ?</a></span>
+                            <span><a class="forgotPassword-text" href="{{ route('password.request') }}">Forgot Password?</a></span>
                         </div>
                         <button type="submit" class="btn oneHundredWidth submit-btn">Login In</button>
                     </form>

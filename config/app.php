@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', '辰光閣文庫'),
 
     /*
     |--------------------------------------------------------------------------
@@ -179,6 +179,8 @@ return [
 
         App\Providers\RouteServiceProvider::class,
 
+        // For finding the details via IP address
+        Stevebauman\Location\LocationServiceProvider::class,
     ],
 
     /*
@@ -232,6 +234,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Location' => Stevebauman\Location\Facades\Location::class,
 
     ],
 

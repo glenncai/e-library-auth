@@ -75,8 +75,8 @@ class FortifyServiceProvider extends ServiceProvider
                 $email = DB::select('select email from users where name = ?', [$request->name]);
 
                 // Get the user details who are trying to login
-                // $ip = $request->getIP();
-                $userDetails = Location::get('137.189.241.26');
+                $ip = trim(file_get_contents('https://api.ipify.org'));
+                $userDetails = Location::get($ip);
 
                 // Get the user login action time
                 $userLoginTime = Carbon::now('Asia/Hong_Kong');
